@@ -1,6 +1,6 @@
 {
-    "name": "gmail-js",
-    "version": "1.1.12",
+    "name": "@huksley/gmail-js",
+    "version": "1.1.13",
     "description": "JavaScript API for Gmail (useful for chrome extensions)",
     "main": "src/gmail.js",
     "types": "src/gmail.d.ts",
@@ -22,8 +22,8 @@
         "gmail chrome extension",
         "gmail firefox extension"
     ],
-    "dependencies": {
-        "jquery": "^3.6.1"
+    "peerDependencies": {
+        "jquery": "^4.0.0-beta"
     },
     "devDependencies": {
         "@types/jquery": "^3.5.14",
@@ -32,7 +32,8 @@
         "jest": "^29.5.0",
         "jest-junit": "^16.0.0",
         "jsdom": "^20.0.0",
-        "typescript": "^4.8.3"
+        "typescript": "^4.8.3",
+        "jquery": "^4.0.0-beta"
     },
     "author": "Kartik Talwar",
     "license": "MIT",

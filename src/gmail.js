@@ -2574,7 +2574,7 @@ var Gmail = function(localJQuery) {
         // map observed classNames to actions
         api.tracker.dom_observer_map = {};
         $.each(api.tracker.dom_observers, function(act,config){
-            if(!$.isArray(config.class)) config.class = [config.class];
+            if(!Array.isArray(config.class)) config.class = [config.class];
             $.each(config.class, function(idx, className) {
                 if (!api.tracker.dom_observer_map[className]) {
                     api.tracker.dom_observer_map[className] = [];
@@ -2607,7 +2607,7 @@ var Gmail = function(localJQuery) {
 
         // was an object of arguments passed, or just a className
         var config = {};
-        if (typeof args === "object" && !$.isArray(args)) {
+        if (typeof args === "object" && !Array.isArray(args)) {
 
             // copy over supported config
             $.each(["class","selector","sub_selector","handler"], function(idx, arg) {
@@ -4347,7 +4347,7 @@ var Gmail = function(localJQuery) {
 
             // if update data has been passeed, loop through & create a new to_wrapper contents
             if (to_array) {
-                if (!$.isArray(to_array)) {
+                if (!Array.isArray(to_array)) {
                     to_array = [to_array];
                 }
                 var html = [];
